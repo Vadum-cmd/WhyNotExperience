@@ -1,2 +1,2 @@
-# WhyNot-is-back
-Project for ООАП
+# WhyNotExperience
+An experience hub for you :)
