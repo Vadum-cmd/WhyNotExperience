@@ -1,0 +1,64 @@
+title Загальна Sequence Diagram
+
+actor Гість
+actor Хост
+participant "AuthService" as Auth
+participant "UserDB" as UDB
+participant "EmailService" as Email
+participant "EventService" as Event
+participant "ValidationService" as Validator
+participant "MediaService" as Media
+participant "ModerationQueue" as ModQ
+participant "BookingService" as Booking
+participant "PaymentService" as Payment
+participant "NotificationService" as Notify
+participant "ReviewService" as Review
+participant "Scheduler" as Scheduler
+
+par [1] Логін / Реєстрація
+    Гість->Auth: Вводить логін і пароль
+    Auth->UDB: Перевірка даних
+    UDB-->Auth: Дані валідні
+    Auth->Гість: Вхід до кабінету
+
+    alt Альтернатива: реєстрація
+        Гість->Auth: Вводить email і пароль
+        Auth->UDB: Створити обліковий запис
+        Auth->Email: Надіслати підтвердження
+        Email->Гість: Email з підтвердженням
+    end
+
+else [2] Створення події
+    Хост->Event: Натискає "Створити подію"
+    Event->Хост: Форма події
+    Хост->Event: Вводить дані
+    Event->Validator: Перевірка полів
+    Validator-->Event: Дані валідні
+
+    Хост->Media: Завантажує фото
+    Media->Event: Посилання на медіа
+
+    Event->ModQ: Відправка на модерацію
+    ModQ->Хост: Подія на перевірці
+
+else [3] Бронювання події
+    Гість->Booking: Обирає подію та дату
+    Booking->Booking: Перевірка місць
+    Booking->Payment: Розрахунок ціни
+    Payment-->Booking: Підтвердження
+    Booking->Notify: Створити підтвердження
+    Notify->Гість: Сповіщення про бронювання
+
+else [4] Оцінка події
+    Scheduler->Гість: Нагадування оцінити
+    Гість->Review: Надати оцінку
+    alt Відгук порушує правила
+        Review->ModQ: Передати на модерацію
+    else Валідний відгук
+        Review->Review: Публікація
+    end
+
+else [5] Фонова синхронізація
+    Scheduler->Notify: Синхронізація даних
+    Notify->Notify: Відправка запланованих сповіщень
+end
