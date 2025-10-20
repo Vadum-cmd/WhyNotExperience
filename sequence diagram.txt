@@ -5,6 +5,8 @@ actor Хост
 participant "AuthService" as Auth
 participant "UserDB" as UDB
 participant "EmailService" as Email
+# This diagram was build using Web Sequence Diagrams
+
 participant "EventService" as Event
 participant "ValidationService" as Validator
 participant "MediaService" as Media
