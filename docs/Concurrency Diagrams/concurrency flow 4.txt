@@ -1,0 +1,20 @@
+title Подія видалена під час бронювання
+
+actor Гість
+participant "BookingService" as Booking
+participant "EventService" as Event
+participant "NotificationService" as Notify
+participant "ModerationQueue" as ModQ
+
+Гість->Booking: Починає бронювання
+Booking->Event: Отримати інформацію про подію
+
+par
+    ModQ->Event: Виявлено порушення
+    Event->ModQ: Підтвердження видалення події
+end
+
+Booking->Event: Підтвердження бронювання
+Event-->Booking: Подія видалена
+Booking->Notify: Повідомлення про скасування
+Notify->Гість: ""Подія видалена адміністрацією""

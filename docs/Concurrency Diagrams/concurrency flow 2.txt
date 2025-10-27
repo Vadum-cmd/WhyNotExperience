@@ -1,0 +1,19 @@
+title Хост зменшує кількість місць у події
+
+actor Гість
+actor Хост
+participant "BookingService" as Booking
+participant "EventService" as Event
+participant "NotificationService" as Notify
+
+Гість->Booking: Обирає подію (40/50 місць)
+Booking->Event: Отримати кількість місць
+
+par
+    Хост->Event: Зменшує кількість місць до 40
+end
+
+Booking->Event: Запит підтвердження бронювання
+Event-->Booking: Місць більше немає
+Booking->Notify: Повідомлення про відмову
+Notify->Гість: ""Місця закінчилися""

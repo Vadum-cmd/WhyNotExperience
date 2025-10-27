@@ -1,0 +1,20 @@
+title Хост переносить місце події під час бронювання
+
+actor Гість
+actor Хост
+participant "BookingService" as Booking
+participant "EventService" as Event
+participant "NotificationService" as Notify
+
+Гість->Booking: Розпочинає бронювання
+Booking->Event: Отримати дані події
+
+par
+    Хост->Event: Змінює місце проведення
+    Event->Notify: Сповіщення про зміну
+end
+
+Booking->Event: Підтвердження бронювання
+Event-->Booking: Подія змінена
+Booking->Notify: ""Подія була оновлена, бронювання скасовано""
+Notify->Гість: Інформація про зміну

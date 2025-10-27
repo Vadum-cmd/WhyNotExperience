@@ -1,0 +1,23 @@
+title Два користувачі одночасно бронюють останнє місце
+
+actor Гість1
+actor Гість2
+participant "BookingService" as Booking
+participant "EventService" as Event
+participant "NotificationService" as Notify
+
+Гість1->Booking: Запит на бронювання
+Booking->Event: Перевірка місць (1 залишилось)
+Гість2->Booking: Запит на бронювання
+Booking->Event: Перевірка місць (1 залишилось)
+
+Booking->Event: Резервування для Гість1
+Event-->Booking: Успішно
+
+Booking->Event: Спроба резервування для Гість2
+Event-->Booking: Місць немає
+Booking->Notify: Повідомлення про відмову
+Notify->Гість2: ""Місця закінчилися""
+
+Booking->Notify: Підтвердження бронювання
+Notify->Гість1: ""Бронювання підтверджено""
