@@ -1,0 +1,21 @@
+title Подія видалена після запиту, але до підтвердження
+
+actor Гість
+actor Хост
+participant "BookingService" as Booking
+participant "EventService" as Event
+participant "NotificationService" as Notify
+
+Гість->Booking: Надсилає запит на бронювання
+Booking->Event: Надіслати запит хосту
+Event->Хост: Сповіщення про бронювання
+
+par
+    Хост->Event: Видаляє подію
+    Event->Notify: Повідомлення всім користувачам
+end
+
+Booking->Event: Очікування відповіді хоста
+Event-->Booking: Подія не існує
+Booking->Notify: "Подію скасовано"
+Notify->Гість: Інформація про видалення
