@@ -140,16 +140,16 @@
           },
           {
             "position": {
-              "x": 310,
-              "y": 180
+              "x": 280,
+              "y": 160
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 80,
+              "height": 80
             },
             "attrs": {
               "text": {
-                "text": "Load Balancer"
+                "text": "Load \nBalancer"
               },
               "body": {
                 "stroke": "red",
@@ -245,7 +245,7 @@
             "id": "f9533a89-cc75-4c20-a78e-683928f62b68",
             "data": {
               "type": "tm.Process",
-              "name": "Load Balancer",
+              "name": "Load \nBalancer",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -260,49 +260,49 @@
                   "id": "52802a09-2b75-4dab-b75a-0c3ef0ae2a53",
                   "title": "Expedition",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Tampering",
-                  "description": "See OWASP Automated Threat #6:\nUsing speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
+                  "description": "Using speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
-                  "score": ""
+                  "score": "7"
                 },
                 {
                   "id": "3c56474d-7f58-49fe-bf92-9bece1054e3a",
                   "title": "Vulnerability scanning",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Low",
                   "type": "Information disclosure",
-                  "description": "See OWASP Automated Threat #14:\nSystematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
+                  "description": "Systematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
                   "mitigation": "Defence includes providing anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
-                  "score": ""
+                  "score": "3"
                 },
                 {
                   "id": "16c090e1-02e0-45fe-8fa9-234bfd15ebc9",
                   "title": "Denial of Service",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #15:\nUsage may resemble legitimate application usage but leads to exhaustion of resources",
+                  "description": "Usage may resemble legitimate application usage but leads to exhaustion of resources",
                   "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
-                  "score": ""
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 4,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 4,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 4
               }
             }
           },
@@ -428,62 +428,62 @@
                   "id": "b46d41f5-7422-4a18-bc6b-eaddbbfa65b2",
                   "title": "Expedition",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "See OWASP Automated Threat #6:\nUsing speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
+                  "description": "Using speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
-                  "score": ""
+                  "score": "9"
                 },
                 {
                   "id": "0bbcc500-b5a6-4c42-a1b2-454d36285727",
                   "title": "Vulnerability scanning",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "See OWASP Automated Threat #14:\nSystematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
+                  "description": "Systematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
                   "mitigation": "Defence includes providing anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
-                  "score": ""
+                  "score": "5"
                 },
                 {
                   "id": "3a205583-fd13-4c7e-904f-ea8be3d30ad7",
                   "title": "Denial of Service",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #15:\nUsage may resemble legitimate application usage but leads to exhaustion of resources",
+                  "description": "Usage may resemble legitimate application usage but leads to exhaustion of resources",
                   "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
-                  "score": ""
+                  "score": "6"
                 },
                 {
                   "id": "a27bc8fc-67a7-44aa-928a-34e7cd3dffca",
                   "title": "Footprinting",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Low",
                   "type": "Information disclosure",
-                  "description": "See OWASP Automated Threat #18:\nInformation gathering with the objective of learning as much as possible about the composition, configuration and security mechanisms of the application",
+                  "description": "Information gathering with the objective of learning as much as possible about the composition, configuration and security mechanisms of the application",
                   "mitigation": "Defences include shutting down unnecessary services/ports and excluding information that could identify and compromise security of the organisation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
-                  "score": ""
+                  "score": "2"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 5,
                 "repudiation": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 9,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 4
               }
             }
           },
@@ -609,49 +609,49 @@
                   "id": "e8e22294-1619-4d76-a9e4-3e0a70582a9f",
                   "title": "Expedition",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Tampering",
-                  "description": "See OWASP Automated Threat #6:\nUsing speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
+                  "description": "Using speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
-                  "score": ""
+                  "score": "4"
                 },
                 {
                   "id": "e5e25a7b-778b-4d5a-97e6-008b692d8b44",
                   "title": "Vulnerability scanning",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Low",
                   "type": "Information disclosure",
-                  "description": "See OWASP Automated Threat #14:\nSystematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
+                  "description": "Systematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
                   "mitigation": "Defence includes providing anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
-                  "score": ""
+                  "score": "3"
                 },
                 {
                   "id": "62c682d0-080f-4352-95fc-76ae752172c2",
                   "title": "Denial of Service",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #15:\nUsage may resemble legitimate application usage but leads to exhaustion of resources",
+                  "description": "Usage may resemble legitimate application usage but leads to exhaustion of resources",
                   "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
-                  "score": ""
+                  "score": "5"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 4,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 4,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 3
               }
             }
           },
@@ -897,46 +897,46 @@
                   "id": "7463c6a4-fb0e-4fd5-b2e4-7991dd28fea0",
                   "title": "Scraping",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Information disclosure",
-                  "description": "See OWASP Automated Threat #11:\nCollecting accessible data and/or processed output from the application",
+                  "description": "Collecting accessible data and/or processed output from the application",
                   "mitigation": "Detect fake or compromised accounts, ensure information is accessible only with authentication and authorisation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 11,
-                  "score": ""
+                  "score": "10"
                 },
                 {
                   "id": "cdf15559-bed9-4a7c-98eb-feeb8f9fdec8",
                   "title": "Skewing",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #16:\nAutomated repeated clicking or requesting or submitting content, affecting application based metrics such as counts, and measures of frequency and/or rate",
+                  "description": "Automated repeated clicking or requesting or submitting content, affecting application based metrics such as counts, and measures of frequency and/or rate",
                   "mitigation": "Defences include control of interaction frequency or proper enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 12,
-                  "score": ""
+                  "score": "7"
                 },
                 {
                   "id": "12fb4c64-e147-41a1-8fed-1ac35ebfa224",
                   "title": "Spamming",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #17:\nStoring malicious such as malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code",
+                  "description": "Storing malicious such as malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code",
                   "mitigation": "Defences include detecting embedded malicious code, controling interaction frequency and enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 13,
-                  "score": ""
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             }
@@ -1069,46 +1069,46 @@
                   "id": "72da0920-8aed-4152-b0ff-80f81d9b0d3d",
                   "title": "Scraping",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Information disclosure",
-                  "description": "See OWASP Automated Threat #11:\nCollecting accessible data and/or processed output from the application",
+                  "description": "Collecting accessible data and/or processed output from the application",
                   "mitigation": "Detect fake or compromised accounts, ensure information is accessible only with authentication and authorisation",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 14,
-                  "score": ""
+                  "score": "8"
                 },
                 {
                   "id": "5fd82320-e550-4b0e-83a3-b5a903f69b97",
                   "title": "Skewing",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #16:\nAutomated repeated clicking or requesting or submitting content, affecting application based metrics such as counts, and measures of frequency and/or rate",
+                  "description": "Automated repeated clicking or requesting or submitting content, affecting application based metrics such as counts, and measures of frequency and/or rate",
                   "mitigation": "Defences include control of interaction frequency or proper enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 15,
-                  "score": ""
+                  "score": "4"
                 },
                 {
                   "id": "4985bf1f-462c-4cdc-a5f1-b1bdce08d495",
                   "title": "Spamming",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "See OWASP Automated Threat #17:\nStoring malicious such as malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code",
+                  "description": "Storing malicious such as malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code",
                   "mitigation": "Defences include detecting embedded malicious code, controling interaction frequency and enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 16,
-                  "score": ""
+                  "score": "6"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 4,
                 "denialOfService": 0
               }
             }
@@ -1254,22 +1254,7 @@
               "cell": "120b6d04-1331-4165-8ec9-8a4a4ebbd0d1",
               "port": "94e2e102-d7ec-45fd-8f48-6aa097eefe5a"
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
@@ -1403,20 +1388,10 @@
             },
             "vertices": [
               {
-                "x": 460,
+                "x": 480,
                 "y": 200
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           }
         ],
         "description": "cool diagram"
