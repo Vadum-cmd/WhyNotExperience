@@ -266,7 +266,7 @@
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 17,
+                  "number": 1,
                   "score": ""
                 },
                 {
@@ -279,7 +279,7 @@
                   "mitigation": "Defence includes providing anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 18,
+                  "number": 2,
                   "score": ""
                 },
                 {
@@ -292,7 +292,7 @@
                   "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 19,
+                  "number": 3,
                   "score": ""
                 }
               ],
