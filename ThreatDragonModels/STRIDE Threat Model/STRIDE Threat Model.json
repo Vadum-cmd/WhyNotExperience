@@ -433,7 +433,7 @@
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 20,
+                  "number": 4,
                   "score": ""
                 },
                 {
@@ -446,7 +446,7 @@
                   "mitigation": "Defence includes providing anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 21,
+                  "number": 5,
                   "score": ""
                 },
                 {
@@ -459,7 +459,7 @@
                   "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 22,
+                  "number": 6,
                   "score": ""
                 },
                 {
@@ -472,7 +472,7 @@
                   "mitigation": "Defences include shutting down unnecessary services/ports and excluding information that could identify and compromise security of the organisation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 23,
+                  "number": 7,
                   "score": ""
                 }
               ],
@@ -614,7 +614,7 @@
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 24,
+                  "number": 8,
                   "score": ""
                 },
                 {
@@ -627,7 +627,7 @@
                   "mitigation": "Defence includes providing anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 25,
+                  "number": 9,
                   "score": ""
                 },
                 {
@@ -640,7 +640,7 @@
                   "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 26,
+                  "number": 10,
                   "score": ""
                 }
               ],
@@ -903,7 +903,7 @@
                   "mitigation": "Detect fake or compromised accounts, ensure information is accessible only with authentication and authorisation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 27,
+                  "number": 11,
                   "score": ""
                 },
                 {
@@ -916,7 +916,7 @@
                   "mitigation": "Defences include control of interaction frequency or proper enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 28,
+                  "number": 12,
                   "score": ""
                 },
                 {
@@ -929,7 +929,7 @@
                   "mitigation": "Defences include detecting embedded malicious code, controling interaction frequency and enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 29,
+                  "number": 13,
                   "score": ""
                 }
               ],
@@ -1075,7 +1075,7 @@
                   "mitigation": "Detect fake or compromised accounts, ensure information is accessible only with authentication and authorisation",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 30,
+                  "number": 14,
                   "score": ""
                 },
                 {
@@ -1088,7 +1088,7 @@
                   "mitigation": "Defences include control of interaction frequency or proper enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 31,
+                  "number": 15,
                   "score": ""
                 },
                 {
@@ -1101,7 +1101,7 @@
                   "mitigation": "Defences include detecting embedded malicious code, controling interaction frequency and enforcement of a single unique action",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 32,
+                  "number": 16,
                   "score": ""
                 }
               ],
