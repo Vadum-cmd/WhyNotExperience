@@ -1,0 +1,19 @@
+%% mermaid.js
+
+graph LR
+
+Client["Client"]
+LB["Load Balancer"]
+API["API Service"]
+Queue["Notification Queue"]
+DB[("DB (PostgreSQL)")]
+Cache[("Cache DB (Redis)")]
+
+%% Interactions
+
+Client -->|"1"| LB
+LB -->|"2"| API
+
+API -->|"3"| Queue
+API -->|"4"| DB
+API -->|"5"| Cache

@@ -1,0 +1,71 @@
+%% mermaid.js
+
+erDiagram
+    %% Користувач (Гість/Хост/Адмін)
+    USER {
+        int UserID PK
+        string Email
+        string PasswordHash
+        string Role "Guest, Host, Admin"
+        boolean IsVerified "For Hosts"
+    }
+
+    %% Подія
+    EVENT {
+        int EventID PK
+        int HostID FK
+        string Title
+        string Description
+        string ImageUrl
+        string Category
+        float Price
+        string Location
+        int Capacity
+        string Status "OnModeration, Active"
+    }
+
+    %% Розклад (конкретні дати події)
+    EVENT_SCHEDULE {
+        int ScheduleID PK
+        int EventID FK
+        datetime StartTime
+        datetime EndTime
+        int AvailableSeats
+    }
+
+    %% Бронювання
+    BOOKING {
+        int BookingID PK
+        int GuestID FK
+        int ScheduleID FK
+        string Status "Confirmed, Cancelled"
+    }
+
+    %% Відгуки
+    REVIEW {
+        int ReviewID PK
+        int AuthorID FK "User who wrote review"
+        int TargetID FK "Event or User being reviewed"
+        int Rating
+        string Comment
+        datetime CreatedAt
+    }
+
+    %% ЗВ'ЯЗКИ (RELATIONSHIPS)
+    %% Один User (Host) створює 0 або багато подій
+    USER ||--o{ EVENT : "publishes (Host)"
+
+    %% Один User (Guest) робить 0 або багато бронювань
+    USER ||--o{ BOOKING : "requests (Guest)"
+
+    %% Подія має 1 або багато слотів у розкладі (подія без дати не існує)
+    EVENT ||--|{ EVENT_SCHEDULE : "has instances"
+
+    %% Один слот розкладу може мати 0 або багато бронювань
+    EVENT_SCHEDULE ||--o{ BOOKING : "contains"
+
+    %% Відгук пише 1 користувач
+    USER ||--o{ REVIEW : "authors"
+
+    %% Відгук належить 1-му користувачу
+    USER ||--o{ REVIEW : "has"
