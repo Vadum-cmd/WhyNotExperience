@@ -1,0 +1,36 @@
+graph LR
+
+Client["<< device >>
+Client"]
+
+subgraph AZ["Azure Cloud"]
+  FW["Firewall / WAF
+  (Azure Application Gateway)"]
+  LB["<< node >>
+  Load Balancer
+  (Azure Load Balancer)"]
+  API["<< node >>
+  API Service / App Server
+  (Azure App Service)"]
+  Queue["<< queue >>
+  Notification queue
+  (Azure Service Bus)"]
+  DB[("<< database >> 
+  DB (PostgreSQL)
+  (Azure Database for PostgreSQL)")]
+  Cache[("<< database >>
+  Cache DB (Redis)
+  (Azure Cache for Redis)")]
+end
+
+%% Styles
+style AZ fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#0d47a1
+
+%% Interactions
+Client -->|"HTTPS"| FW
+FW -->|"HTTPS"| LB
+LB -->|"REST API"| API
+
+API -->|"AMQP / HTTPS"| Queue
+API -->|"SQL over TLS"| DB
+API -->|"TCP / TLS"| Cache
