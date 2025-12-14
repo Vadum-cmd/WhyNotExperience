@@ -23,8 +23,17 @@ subgraph AZ["Azure Cloud"]
   (Azure Cache for Redis)")]
 end
 
+%% Legend
+subgraph Legend["Legend: Resource types"]
+  L1["<< device >> – Client device or external system"]
+  L2["<< node >> – Compute node / service instance"]
+  L3["<< database >> – Persistent data storage"]
+  L4["<< queue >> – Asynchronous messaging queue"]
+end
+
 %% Styles
 style AZ fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#0d47a1
+style Legend fill:#f5f5f5,stroke:#616161,stroke-width:1px
 
 %% Interactions
 Client -->|"HTTPS"| FW
