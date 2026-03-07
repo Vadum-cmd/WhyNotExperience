@@ -1,0 +1,1 @@
+{"version":3,"file":"GovernmentalEmailService.d.ts","sourceRoot":"","sources":["../../../src/booking-service/infrastructure/GovernmentalEmailService.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,qBAAa,wBAAwB;IACnC,OAAO,CAAC,WAAW,CAAC;;IAcd,uBAAuB,CAAC,OAAO,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM,GAAG,OAAO,CAAC,IAAI,CAAC;CA+DnG"}

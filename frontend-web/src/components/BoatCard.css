@@ -1,0 +1,181 @@
+.boat-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #E5E5EA;
+}
+
+.boat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.boat-card-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #F5F5F7;
+}
+
+.boat-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boat-card-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease;
+}
+
+.boat-card-nav:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.boat-card-nav-prev {
+  left: 12px;
+}
+
+.boat-card-nav-next {
+  right: 12px;
+}
+
+.boat-card-favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  color: #000000;
+  transition: all 0.2s ease;
+}
+
+.boat-card-favorite:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.boat-card-favorite-active {
+  color: #FF3B30;
+}
+
+.boat-card-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.boat-card-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+.boat-card-indicator-active {
+  background-color: #FFFFFF;
+  width: 24px;
+  border-radius: 3px;
+}
+
+.boat-card-content {
+  padding: 20px;
+}
+
+.boat-card-header {
+  margin-bottom: 16px;
+}
+
+.boat-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.boat-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.boat-card-review-count {
+  font-size: 13px;
+  color: #666666;
+}
+
+.boat-card-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E5E5EA;
+}
+
+.boat-card-spec {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666666;
+}
+
+.boat-card-spec svg {
+  color: #666666;
+  flex-shrink: 0;
+}
+
+.boat-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boat-card-host {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666666;
+}
+
+.boat-card-host svg {
+  color: #666666;
+  flex-shrink: 0;
+}
+
+.boat-card-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}

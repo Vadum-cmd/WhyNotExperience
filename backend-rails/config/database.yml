@@ -1,0 +1,29 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: boat_db
+  username: <%= ENV.fetch("DB_USER") { "s.petryshyn" } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { "" } %>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
+
+test:
+  <<: *default
+  database: boat_db_test
+  username: <%= ENV.fetch("DB_USER") { "s.petryshyn" } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { "" } %>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
+
+production:
+  <<: *default
+  database: <%= ENV["DB_NAME"] %>
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  host: <%= ENV["DB_HOST"] %>
+  port: <%= ENV["DB_PORT"] %>
+

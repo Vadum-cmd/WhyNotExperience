@@ -1,0 +1,142 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  padding: 24px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.register-subtitle {
+  font-size: 18px;
+  color: #666666;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.register-card {
+  margin-bottom: 24px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #E5E5EA;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #FFFFFF;
+  color: #000000;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1E6CFF;
+}
+
+.form-input::placeholder {
+  color: #A3A3A3;
+}
+
+.role-selector {
+  display: flex;
+  gap: 12px;
+}
+
+.role-option {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #E5E5EA;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-option:hover {
+  border-color: #1E6CFF;
+  background-color: #F5F5F7;
+}
+
+.role-option-active {
+  border-color: #1E6CFF;
+  background-color: #1E6CFF;
+  color: #FFFFFF;
+}
+
+.error-message {
+  padding: 12px 16px;
+  background-color: #FFE5E5;
+  border: 1px solid #FF3B30;
+  border-radius: 12px;
+  color: #FF3B30;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
+
+.login-link a {
+  color: #1E6CFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .register-page {
+    padding: 16px;
+  }
+
+  .register-title {
+    font-size: 36px;
+  }
+
+  .role-selector {
+    flex-direction: column;
+  }
+}

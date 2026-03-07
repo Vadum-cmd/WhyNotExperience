@@ -1,0 +1,33 @@
+.time-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.time-slot {
+  padding: 10px 20px;
+  border: 1px solid #E5E5EA;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot:hover {
+  border-color: #1E6CFF;
+  background-color: #F5F5F7;
+}
+
+.time-slot-selected {
+  background-color: #1E6CFF;
+  color: #FFFFFF;
+  border-color: #1E6CFF;
+}
+
+.time-slot-selected:hover {
+  background-color: #1556CC;
+}
+

@@ -1,0 +1,8 @@
+class HealthController < ApplicationController
+  skip_before_action :authenticate_request
+
+  def check
+    render json: { status: 'ok', timestamp: Time.current.iso8601 }
+  end
+end
+

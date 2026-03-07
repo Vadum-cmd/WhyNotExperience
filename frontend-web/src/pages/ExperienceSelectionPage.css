@@ -1,0 +1,352 @@
+.experience-selection-page {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #E5E5EA;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 100;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.back-button:hover {
+  opacity: 0.6;
+}
+
+.header-spacer {
+  flex: 1;
+}
+
+.experience-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.experience-main-title {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.experience-subtitle {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 32px;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.experience-card {
+  border: 2px solid #E5E5EA;
+  border-radius: 16px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  border-color: #1E6CFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.experience-card-selected {
+  border-color: #1E6CFF;
+  background-color: #F5F5F7;
+  box-shadow: 0 8px 24px rgba(30, 108, 255, 0.15);
+}
+
+.experience-card-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.experience-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.experience-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  padding: 24px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.experience-image-overlay .experience-name {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.experience-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  flex: 1;
+}
+
+.experience-duration-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.experience-duration {
+  font-size: 14px;
+  color: #666666;
+}
+
+.experience-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.experience-description-text {
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+}
+
+.experience-timeline-container {
+  margin-top: 4px;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.timeline-step:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.timeline-circle-start {
+  background-color: #1E6CFF;
+  border: 2px solid #1E6CFF;
+  box-shadow: 0 2px 8px rgba(30, 108, 255, 0.25);
+}
+
+.timeline-circle-route {
+  background-color: #FFFFFF;
+  border: 2px solid #E5E5EA;
+  position: relative;
+}
+
+.timeline-route-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E5E5EA;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-circle-end {
+  background-color: #FFFFFF;
+  border: 2px solid #1E6CFF;
+  box-shadow: 0 2px 8px rgba(30, 108, 255, 0.15);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 13px;
+  top: 28px;
+  width: 2px;
+  height: calc(100% - 2px);
+  background-color: #E5E5EA;
+}
+
+.timeline-line-active {
+  background-color: #1E6CFF;
+  background: linear-gradient(to bottom, #1E6CFF 0%, #1E6CFF 50%, #E5E5EA 50%, #E5E5EA 100%);
+}
+
+.timeline-line-route {
+  background-color: #E5E5EA;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-top: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.timeline-route-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.timeline-route-label-start {
+  color: #1E6CFF;
+}
+
+.timeline-route-label-end {
+  color: #1E6CFF;
+}
+
+.timeline-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin: 0 0 2px 0;
+}
+
+.timeline-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.no-experiences {
+  text-align: center;
+  padding: 64px 24px;
+  font-size: 16px;
+  color: #666666;
+}
+
+.experience-footer {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #E5E5EA;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 64px 24px;
+  font-size: 16px;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .experience-content {
+    padding: 24px 16px;
+  }
+
+  .experience-main-title {
+    font-size: 28px;
+  }
+
+  .experience-card-image {
+    height: 180px;
+  }
+
+  .experience-image-overlay {
+    padding: 20px 16px;
+  }
+
+  .experience-image-overlay .experience-name {
+    font-size: 20px;
+  }
+
+  .experience-header-section {
+    flex-direction: column;
+  }
+
+  .experience-duration-price {
+    align-items: flex-start;
+  }
+}

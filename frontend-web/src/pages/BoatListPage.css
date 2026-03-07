@@ -1,0 +1,85 @@
+.boat-list-page {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.boat-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #E5E5EA;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 100;
+}
+
+.back-button,
+.share-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.back-button:hover,
+.share-button:hover {
+  opacity: 0.6;
+}
+
+.header-title h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.boat-list-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.boat-list-info {
+  margin-bottom: 24px;
+}
+
+.boat-count {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.boat-date-location {
+  font-size: 14px;
+  color: #666666;
+}
+
+.boats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.loading,
+.no-results {
+  text-align: center;
+  padding: 64px 24px;
+  font-size: 16px;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .boat-list-header {
+    padding: 12px 16px;
+  }
+
+  .boat-list-content {
+    padding: 16px;
+  }
+}

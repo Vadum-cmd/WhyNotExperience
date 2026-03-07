@@ -1,0 +1,27 @@
+{
+  "name": "boat-app",
+  "version": "1.0.0",
+  "description": "BOAT - Book Your Ride! Marketplace application",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend/*"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build"
+  },
+  "keywords": [
+    "boat",
+    "booking",
+    "marketplace",
+    "experiences"
+  ],
+  "author": "Why Not Experience Team",
+  "license": "MIT"
+}
+
+

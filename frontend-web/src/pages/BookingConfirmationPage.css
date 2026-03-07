@@ -1,0 +1,111 @@
+.booking-confirmation-page {
+  min-height: 100vh;
+  background-color: #f5f5f7;
+  padding: 24px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.booking-confirmation-page .loading {
+  text-align: center;
+  padding: 48px 24px;
+  color: #666;
+}
+
+.booking-confirmation-page .confirmation-card {
+  max-width: 440px;
+  width: 100%;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.booking-confirmation-page .confirmation-card.error-card {
+  text-align: center;
+}
+
+.booking-confirmation-page .confirmation-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.booking-confirmation-page .confirmation-card h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #000;
+}
+
+.booking-confirmation-page .confirmation-subtitle {
+  color: #666;
+  margin: 0 0 24px;
+  font-size: 15px;
+}
+
+.booking-confirmation-page .confirmation-details {
+  text-align: left;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.booking-confirmation-page .confirmation-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.booking-confirmation-page .confirmation-row:last-child {
+  border-bottom: none;
+}
+
+.booking-confirmation-page .confirmation-row .label {
+  color: #666;
+  font-size: 14px;
+}
+
+.booking-confirmation-page .confirmation-row .value {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.booking-confirmation-page .status-badge {
+  text-transform: capitalize;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.booking-confirmation-page .status-confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.booking-confirmation-page .status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.booking-confirmation-page .confirmation-note {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+.booking-confirmation-page .confirmation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
